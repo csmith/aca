@@ -45,6 +45,9 @@ func main() {
 
 	// Using a custom delimiter
 	generator, err = aca.NewGenerator(", ", rand.NewSource(time.Now().UnixNano()))
+	if err != nil {
+		panic(err)
+	}
 	println(generator.Generate()) // prints something like "beautiful, cerulean, timelord"
 }
 ```
