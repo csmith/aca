@@ -19,7 +19,7 @@ poised-blue-vicuna
 female-turquoise-dwarf
 ```
 
-There are 1172 adjectives, 80 colours and 353 animals giving rise to just over 33 million unique combinations of words.
+There are 1172 adjectives, 132 colours and 419 animals giving rise to just over 64 million unique combinations of words.
 
-The longest adjective is 15 characters, colour is 10 characters, and animal is 13, giving rise to a maximum string
-length of 40 characters if using a single character delimiter like "-".
+The longest adjective is 15 characters, colour is 11 characters, and animal is 13, giving rise to a maximum string
+length of 41 characters if using a single character delimiter like "-".
