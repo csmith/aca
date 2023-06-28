@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"math/rand"
 	"strings"
+	"time"
 )
 
 //go:embed data/*.txt
@@ -18,6 +19,11 @@ type Generator struct {
 
 	rand      *rand.Rand
 	delimiter string
+}
+
+// NewDefaultGenerator creates a new Generator using "-" as a delimiter and a default source of randomness.
+func NewDefaultGenerator() (*Generator, error) {
+	return NewGenerator("-", rand.NewSource(time.Now().UnixNano()))
 }
 
 // NewGenerator creates a new Generator that will use the given delimiter and source of randomness.

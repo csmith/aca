@@ -23,3 +23,28 @@ There are 1172 adjectives, 132 colours and 419 animals giving rise to just over 
 
 The longest adjective is 15 characters, colour is 11 characters, and animal is 13, giving rise to a maximum string
 length of 41 characters if using a single character delimiter like "-".
+
+## Example usage
+
+```go
+package main
+
+import (
+	"github.com/csmith/aca"
+	"math/rand"
+	"time"
+)
+
+func main() {
+	// Using the default generator
+	generator, err := aca.NewDefaultGenerator()
+	if err != nil {
+		panic(err)
+	}
+	println(generator.Generate()) // prints something like "beautiful-cerulean-timelord"
+
+	// Using a custom delimiter
+	generator, err = aca.NewGenerator(", ", rand.NewSource(time.Now().UnixNano()))
+	println(generator.Generate()) // prints something like "beautiful, cerulean, timelord"
+}
+```
